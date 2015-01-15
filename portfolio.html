@@ -1,0 +1,235 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matt Migliore | Web Developer</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/least.min.css">
+    
+    <script src="js/vendor/modernizr.js"></script>
+    
+  </head>
+  <body>
+    <header>
+      <div class="row">
+        <div class="large-12 columns">
+         <h1> Matthew Migliore </h1>
+         <h2> Web Developer</h2>
+
+         <nav>
+          <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="skills.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+
+        <i class="menu"></i>
+
+
+        </div>
+      </div>
+    </header>
+
+    <div class="row">
+    <div class=" large-10 columns">
+      <div class="content">
+
+        <article>
+          
+           <h1> Portfolio </h1>
+          </article>
+
+          <article class="portfolio">
+        
+              <h1>PHP Password Generator</h1>
+              <a href="Password/index.php" target="_blank"> <img src="img/pPassword.png"></a>
+          </article>
+
+
+          <article class="portfolio">
+        
+              <h1>LIGRA</h1>
+              <a href="LIGRA/index.html" target="_blank"> <img src="img/pLIGRA.png"></a>
+          </article>
+
+           <article class="portfolio">
+        
+              <h1>Restaurant</h1>
+              <a href="Grill/index.html" target="_blank"> <img src="img/pGrill.png"></a>
+          </article>
+
+          <article class="portfolio">
+        
+              <h1>One Page</h1>
+              <a href="onePage/index.html" target="_blank"> <img src="img/pOne.png"></a>
+
+          </article>
+
+          <article class="portfolio">
+        
+              <h1>Blog</h1>
+              <a href="sportBlog/index.html" target="_blank"> <img src="img/pBlog.png"></a>
+
+          </article>
+
+          <article class="portfolio">
+        
+              <h1>AJAX and JSON</h1>
+              <a href="JSON/index.html" target="_blank"> <img src="img/pFlickr.png"></a>
+
+          </article>
+
+          <article class="portfolio">
+        
+              <h1>Responsive</h1>
+              <a href="Responsive/index.html" target="_blank"> <img src="img/pResponsive.png"></a>
+
+          </article>
+
+         <!-- <article>
+            <h1>CSS Animations</h1>
+
+            <div class="exHov">Hover Over Me</div>
+
+            <div class="exHovTwo">Hover Over Me</div>
+          </article>
+
+          <article>
+          
+            <h1> jQuery AJAX and JSON </h1>
+
+            <div class="search">
+              <label for="search-bar"><img src="img/flickr.png"></label>
+          
+              <input class="search-bar" name="search-bar" placeholder="Enter your flickr search..." type="text"  />
+              <a class="search-button"></a>
+             
+        </div>
+
+        <div class='resultsFlickr'>
+              <h2></h2>
+              <ul id="gallery"></ul>
+        </div>
+
+
+       
+        <!--<div class="search">
+              <label for="search-bar"><img src="img/youtube.png"></label>
+              <input class="search-bar" name="search-bar" placeholder="Enter your YouTube search..." type="text" />
+              <a class="search-button"></a>
+              
+        </div>
+
+         <div class='resultsYoutube'>
+              <h2></h2>
+              <ul></ul>
+        </div>-->
+
+        
+          
+        </article>
+
+        
+
+     </div <!-- end content -->
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/jquery.avgrund.js"></script>
+  <script src="js/least.min.js"></script>
+  <script src="js/jquery.lazyload.min.js"></script>
+
+  <script type="text/javascript">
+      $('.menu').click(function() {
+        $('nav').toggleClass("open");
+      });
+
+      $('#gallery').least();
+
+            function get_flickrPictures() {
+              var searchData1 = $(".search-bar:first-of-type").val();
+      
+              
+              $(".resultsFlickr ul").empty();
+      
+              $.ajax({
+                url: "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags="       + searchData1 + "&jsoncallback=?",
+                type: "GET",
+                dataType: "json",
+                success: function(result){
+                  console.log(result);
+      
+                  $('.resultsFlickr h2:first-of-type').text( result.title ).wrap("<a href='" +result.link+ "'  />")
+      
+                  $.each(result.items, function(index,pictures) {
+                  $(".resultsFlickr ul:first-of-type").append("<li> <a href='" +pictures.link+ "'> <img src='" +     pictures.media.m+ "' alt='" +pictures.title+ "' />" + "</a>" + "</li>");
+                    
+            
+                });
+                
+                  
+                }
+              });
+      
+              
+            }
+
+      $('.search-button:first-of-type').click(function() {
+
+       get_flickrPictures();
+
+      });
+
+        $(".search-bar:first-of-type").keydown(function (e) {
+            if (e.keyCode == 13) {
+               get_flickrPictures();
+            }
+        });
+
+
+
+
+
+
+
+        function get_YouTubeVideos() {
+
+          var video_start_index = 1;
+
+          var searchData3 = $(".search-bar:last-of-type").val();
+        $.ajax({
+          url: "https://gdata.youtube.com/feeds/api/videos?alt=json&max-results=5&start-index=" + video_start_index + "&q=' + searchData3 + '",
+          type: "GET",
+          dataType: "json",
+          success: function(result) {
+          console.log(result);  
+          $.each(result.feed.entry, function(index, video) {
+            $(".resultsYoutube ul").append("<li><img src='" + video.media$group.media$thumbnail[0].url + "' alt='" + video.title.$t + "' />" + video.title.$t + "<li>");
+          });
+          video_start_index += 5;
+          }
+        });
+      }
+
+      $('.search-button:last-of-type').click(function() {
+
+       get_YouTubeVideos();
+
+      });
+
+
+   
+
+  
+      
+  </script>
+
+  </body>
+</html>

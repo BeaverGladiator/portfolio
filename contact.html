@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matt Migliore | Web Developer</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <script src="js/vendor/modernizr.js"></script>
+    
+  </head>
+  <body>
+    <header>
+      <div class="row">
+        <div class="large-12 columns">
+         <h1> Matthew Migliore </h1>
+         <h2> Web Developer</h2>
+
+         <nav>
+          <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+
+        <i class="menu"></i>
+
+
+        </div>
+      </div>
+    </header>
+
+    <div class="row">
+    <div class=" large-10 columns">
+      <div class="content">
+
+        <article>
+          
+            <h1>Contact Me</h1>
+
+            <p>
+
+            Feel free to contact me if you are interested in any web development work <br><br>
+
+            Matthew Migliore<br>
+            MiglioreWD@gmail.com<br>
+
+            Click<a href="mailto:migliorewd@gmail.com?Subject=Hello%20again" target="_top">
+            here</a> to send an email
+            </p>
+          <!--<h1>Thank You!</h1>
+
+          I coud not get the for submission to work. I tried to make it write to a .txt file located in the documents folder 
+
+            <form action='#' method='write'>
+              <fieldset>
+                <label for="name">Name:</label>
+                <input type='text' id='name' placeholder='Enter your name' />
+
+                <label for='email'>Email:</label>
+                <input type='text' id='email' placeholder='Enter your email address' />
+
+                <label for='message'>Message</label>
+                <textarea id='message' placeholder='What do you think?'></textarea>
+
+                <input type='submit' value='Send Message' />
+
+              </fieldset>
+            </form>-->
+          
+        </article>
+
+     </div <!-- end content -->
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery.js"></script>
+
+  <script type="text/javascript">
+   $(function() {
+
+     $('.menu').click(function() {
+         $('nav').toggleClass("open");
+      });
+
+     $('fieldset input:last-of-type').click(function(){
+        
+
+          $('article h1 + h1').addClass('success');
+     });
+  
+  
+     
+     
+
+    });
+  </script>
+  
+  </body>
+</html>

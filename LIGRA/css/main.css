@@ -1,0 +1,521 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@font-face {
+    font-family: 'nexa_boldregular';
+    src: url('../fonts/Nexa_Free_Bold-webfont.eot');
+    src: url('../fonts/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Nexa_Free_Bold-webfont.woff') format('woff'),
+         url('../fonts/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebasregular';
+    src: url('../fonts/BEBAS___-webfont.eot');
+    src: url('../fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BEBAS___-webfont.woff') format('woff'),
+         url('../fonts/BEBAS___-webfont.ttf') format('truetype'),
+         url('../fonts/BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('../img/alu_dark.png');
+    
+}
+
+/***** header *****/
+header {
+    width: 100%;
+    height: 135px;
+    background-color: #000;
+}
+
+header img {
+    float: left;
+    margin: 7px 0px 0px 25px;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0 15px;
+    font-family: 'bebasregular';
+    letter-spacing: 2px;
+    color: #FDDD19;
+    line-height: 135px;
+}
+
+/***** nav *****/
+.navContainer {
+    float: left;
+    width: 100%;
+    background-color: #FEDC19;
+}
+
+.navContainer nav {
+    width: 1180px;
+    margin: 0 auto;
+
+}
+
+.navContainer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navContainer nav ul li {
+    float: left;
+    padding: 15px 25px;
+
+}
+
+
+.navContainer nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'nexa_boldregular';
+    font-size: 15px;
+
+}
+
+
+.navContainer nav ul li:hover {
+    background-color: #000;
+}
+
+
+.navContainer nav li:hover a {
+    color: #FEDC19;
+}
+    
+
+
+/***** general *****/
+.mainContent {
+    width: 1180px;
+    margin: 70px auto 0px auto;
+    background-color: #eee;
+            box-shadow: 2px 2px 3px #000;
+    -webkit-box-shadow: 2px 2px 3px #000;
+    -webkit-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+
+    border: 3px solid #FDDD19;
+}
+
+.mainContent a {
+    text-decoration: none;
+    color: #3b3b3b;
+}
+
+.mainContent a:hover {
+    color: #FEDC19;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.mainContent section {
+    margin: 0;
+    padding: 0;
+}
+
+
+.mainContent section p {
+    margin: 0;
+    padding: 25px;
+    font-family: arial;
+    
+}
+
+.mainContent h1 {
+    text-align: center;
+    font-family: 'bebasregular';
+    padding-top: 15px;
+    font-size: 2.5em;
+}
+
+.mainContent hgroup {
+    padding: 15px;
+}
+
+.mainContent hgroup h3 {
+    text-align: center;
+}
+
+.mainContent article hgroup {
+    text-align: center;
+    font-family: 'nexa_boldregular';
+}
+
+.mainContent article h3,h4,p {
+    text-align: center;
+}
+
+.mainContent article p {
+    text-align: center;
+}
+
+.mainContent h1 + h2 {
+    text-align: center;
+    font-family: 'bebasregular';
+}
+
+/***** homepage *****/
+.homepage {
+    display: block;
+    margin: 15px;
+
+    -webkit-border-radius: 30px 15px 30px 15px;
+            border-radius: 30px 15px 30px 15px;
+
+    -webkit-box-shadow: 3px 3px 3px #000;
+            box-shadow: 3px 3px 3px #000;
+
+}
+
+.homepage:first-of-type{
+    float: left;
+}
+
+.homepage:last-of-type {
+    float: right;
+}
+
+.mainContent p.welcome {
+    clear: both;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: bold;
+    font-family: arial;
+}
+
+/***** about/legal li's *****/
+.mainContent section p + ul li {
+    margin: 0 auto;
+    padding: 5px 0px;
+    width: 700px;
+}
+
+.mainContent section p + ul li:before {
+    content: "\f013";
+    font-family: 'FontAwesome';
+    padding: 0% 1%;
+}
+
+/***** press *****/
+.mainContent section article h4 + p {
+    margin: 0 auto;
+    width: 70%;
+    text-align: left;
+}
+
+/***** legislation *****/
+.mainContent section h1 + img {
+    display: block;
+    margin: 0 auto;
+    -webkit-border-radius: 30px 5px 30px 5px;
+            border-radius: 30px 5px 30px 5px;
+
+    -webkit-box-shadow: 2px 2px 2px #000;
+            box-shadow: 2px 2px 2px #000;
+
+}
+.mainContent article p + .legisP {
+    color: green;
+}
+
+/***** staff *****/
+.mainContent section h2,h3 {
+    text-align: center;
+}
+
+.mainContent section article > h3 {
+    font-weight: bold;
+    font-size: 2em;
+    color: #FDDD19;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.mainContent section section h2 {
+    font-family: 'nexa_boldregular';
+    font-size: 1.75em;
+}
+
+.mainContent section section {
+            /*box-shadow: 2px 2px 3px #000;
+    -webkit-box-shadow: 2px 2px 3px #000;*/
+    border: 3px solid #444;
+}
+
+.mainContent section section article {
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+
+}
+
+
+/**** contact *****/
+.mainContent section h2 + p {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.mainContent .contact h2 { 
+    color: #FDDD19;
+    text-shadow: 2px 2px 8px #000;
+}
+
+/***** events *****/
+.mainContent h2 + div img {
+    display: block;
+    padding: 7.5px 15px;
+    margin: 0 auto;
+}
+
+.mainContent h2 + div h3 {
+    opacity: 0;
+}
+
+.mainContent h2 + div img:hover h3 {
+    opacity: 1;
+}
+
+/***** footer *****/    
+footer {
+    background-color: #000;
+    height: 100px;
+    width: 100%;
+    
+}
+
+footer p {
+    margin: 0 auto;
+    padding: 10px 0px 0px 0px;
+    color: #FEDC19;
+    font-family: 'nexa_boldregular';
+    font-size: 14px;
+    text-align: center;
+}
+
+footer.smallPage {
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

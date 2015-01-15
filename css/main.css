@@ -1,0 +1,442 @@
+@font-face {
+    font-family: 'komika';
+    src: url('../fonts/komikatitle/KomikaTitle-Kaps-webfont.eot');
+    src: url('../fonts/komikatitle/KomikaTitle-Kaps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/komikatitle/KomikaTitle-Kaps-webfont.woff') format('woff'),
+         url('../fonts/komikatitle/KomikaTitle-Kaps-webfont.ttf') format('truetype'),
+         url('../fonts/komikatitle/KomikaTitle-Kaps-webfont.svg#komika_title_-_kapsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hattori-hanzo';
+    src: url('../fonts/Hattori-Hanzo/Hattori_Hanzo-webfont.eot');
+    src: url('../fonts/Hattori-Hanzo/Hattori_Hanzo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Hattori-Hanzo/Hattori_Hanzo-webfont.woff') format('woff'),
+         url('../fonts/Hattori-Hanzo/Hattori_Hanzo-webfont.ttf') format('truetype'),
+         url('../fonts/Hattori-Hanzo/Hattori_Hanzo-webfont.svg#hattori_hanzolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+html, body {
+  height: 100%;
+}
+
+
+body {
+  background: url('../img/purty_wood.png') repeat;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font: 1em/1.5 "hattori-hanzo", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default; 
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto; 
+}
+
+
+header {
+  background-color: #1e2936;
+  width: 100%;
+  height: 100px;
+  box-shadow: 0px 3px 3px #000;
+  -webkit-box-shadow: 0px 3px 3px #000;
+  
+}
+
+header h1 {
+  font-family: 'komika';
+  color: #eee;
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-shadow: .5px .5px #000;
+  margin: 0;
+  float: left;
+}
+
+
+header h2 {
+  clear: left;
+  font-family: 'komika';
+  color: #eee;
+  font-size: 25px;
+  letter-spacing: 3px; 
+  text-shadow: .5px .5px #000;
+  margin: 0;
+  float: left;
+}
+
+header nav { 
+  float:right; 
+  margin: 0;
+  padding: 0; 
+  width: 525px;
+
+}
+
+header nav ul { 
+    list-style:none;
+    margin:0;
+    padding:0; 
+}
+header nav ul li { 
+    float:left; 
+    padding: 0% 3%; 
+  }
+
+header nav ul li a { 
+  font-family: 'komika';
+  font-size: 20px;
+  color: #eee;
+  text-decoration:none;
+  letter-spacing: 3px;
+  text-shadow: .2px .2px #000;
+  display: block;
+
+  -webkit-transition: all .2s ease;
+-moz-transition: all .2s ease;
+-ms-transition: all .2s ease;
+-o-transition: all .2s ease;
+transition: all .2s ease;
+}
+
+header nav ul li a:hover { 
+  color: #D63333;
+  text-shadow: .2px .2px #fff;
+
+     -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+       -o-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+header .menu:before{
+  content: "\f039";
+  font-family: 'FontAwesome';
+  font-size: 40px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  top: 30px;
+  right: 15px;
+ }
+
+header .menu{
+  display: none;
+  cursor: pointer;
+  color: #eee;
+  float: right;
+}
+
+
+.content{
+  max-width: 1180px;
+}
+section {
+  width:100%;
+  background-color: white;
+  margin: 2%  auto;
+  box-shadow: 3px 3px 3px #000;
+  -webkit-box-shadow: 3px 3px 3px #000;
+  border:2px solid #333;
+  border-radius:2% ;
+}
+
+article {
+  width:100%;
+  height:90%;
+  background-color: white;
+  margin: 2% auto;
+  box-shadow: 3px 3px 3px #000;
+  -webkit-box-shadow: 3px 3px 3px #000;
+  border:2px solid #333;
+  border-radius:2% ;
+  position: relative;
+}
+
+article h1 {
+  font-family: 'komika';
+  font-size: 2em;
+  padding: 0% 1%;
+  margin: 0;}
+
+article h1 + img{
+  padding: 2% 20% 2% 20%;
+  max-width: 100%;
+  height: auto;
+   }
+
+article p {
+  font-family: 'hattori-hanzo';
+  padding: 2% ;
+  margin: 0;
+  font-size: 100%;
+  
+}
+
+article h2{
+  font-family: 'hattori-hanzo';
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 2%;
+  margin: 0;
+}
+
+
+article img + ul li{
+  padding: .5% 0%;
+}
+
+article img + ul li:before{
+  content: "\f0ac";
+  font-family: 'FontAwesome';
+  padding: 0% 1%;
+
+}
+
+article img + ul li a:hover{
+  color: #D63333;
+}
+
+article h2 + img{
+  width: 25%;
+  height: auto;
+  padding: 0 5% 2% 5%;
+}
+
+article h1 + p{
+    font-size: 1.5em;
+}
+
+ article h1 + p a{
+    webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+ }
+
+article h1 + p a:hover{
+    color: #d63333;
+    -moz-transform: scale(1.2);
+ -webkit-transform: scale(1.2);
+      -o-transform: scale(1.2);
+     -ms-transform: scale(1.2);
+         transform: scale(1.2);
+
+}
+
+
+
+@media screen and (max-width: 950px) {
+  header nav {
+    display: none;
+  }
+
+  header nav.open {
+    clear: both;
+    float: right;
+    display: block;
+    width: 100%;
+  }
+
+  header nav ul li {
+    float: none;
+    text-align: right;
+    background-color: #1e2936;
+    padding: 3% 2%;
+  }
+
+  .header nav ul li a{
+    padding-right: 2%;
+  }
+
+  header .menu{
+    display: block;
+  }
+
+  header nav ul li a:hover { 
+  color: #eee;
+  text-shadow: none;
+     -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+       -o-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+} 
+
+article h2{
+  font-size: 1em;
+}
+
+article ul li{
+  font-size: .9em;
+}
+
+article h2 + img{
+  display: none;
+}
+
+.search .search-button{
+  top: 80%;
+}
+
+} /* end media 950px; */
+
+@media screen and (max-width: 600px) {
+.search .search-button{
+  top: 50%;
+}
+}
+
+article fieldset input:last-of-type{
+  background-color: #1e2936;
+  color: #eee;
+  border: none;
+  width: 40%;
+  height: 50px;
+  margin-left: 30%;
+
+}
+
+article h1 + h1{
+  display: none;
+}
+
+.success{
+  display: block;
+  color: #49BF5C;
+  text-shadow: .5px .5px #000;
+}
+
+.search img{
+  padding: 3% 40%;
+  max-width: 100%;
+  height: auto;
+}
+
+.search .search-bar{
+  width: 70%;
+  margin: 3% auto;
+          box-shadow: 3px 3px 3px #000;
+  -webkit-box-shadow: 3px 3px 3px #000;
+}
+
+.search .search-button:before{
+  content: "\f002";
+  font-family: 'FontAwesome';
+  padding: 0% 1%;
+
+}
+
+
+
+
+.search .search-button{
+  position: absolute;
+  top: 85%;
+  left: 70%;
+}
+
+.search{
+  position: relative;
+  width: 50%;
+  margin: 3% auto;
+  border: 2% solid #1e2936;
+  
+}
+
+.resultsFlickr ul{
+  list-style: none;
+}
+
+.resultsFlickr ul li{
+  float: left;
+  padding: 1%;
+
+}
+
+.exHov{
+  width: 25%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 5% ;
+  margin: 5%;
+  background-color: #1e2936;
+  color: #eee;
+  text-align: center;
+
+  transition:.5s ease;
+  -webkit-transition:.5s ease;
+     -moz-transition:.5s ease;
+       -o-transition:.5s ease;
+}
+
+.exHovTwo{
+  width: 25%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 5% ;
+  margin: 5%;
+  background-color: #1e2936;
+  color: #eee;
+  text-align: center;
+  transition:.5s ease;
+  -webkit-transition:1s ease;
+     -moz-transition:1s ease;
+       -o-transition:1s ease;
+}
+
+.exHovTwo:hover{
+  cursor: pointer;
+  color: #1383ba;
+
+background-color: #BA4A13;
+   -moz-transform: scale(1.2) rotate(720deg) translateX(100px) skewX(20deg);
+-webkit-transform: scale(1.2) rotate(720deg) translateX(100px) skewX(20deg);
+     -o-transform: scale(1.2) rotate(720deg) translateX(100px) skewX(20deg);
+    -ms-transform: scale(1.2) rotate(720deg) translateX(100px) skewX(20deg);
+        transform: scale(1.2) rotate(720deg) translateX(100px) skewX(20deg);
+  
+}
+
+
+
+
+.exHov:hover{
+  cursor: pointer;
+  color: #B0AB23;
+  background-color: #9913BA;
+           -moz-transform: translateX(75%);
+        -webkit-transform: translateX(75%);
+             -o-transform: translateX(75%);
+            -ms-transform: translateX(75%);
+                transform: translateX(75%);
+              }
+
+article > a{
+  display: block;
+  color: #1e2936;
+  padding:2%;
+}
+
+article > a:hover{
+  color: #d63333;
+}
+
